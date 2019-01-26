@@ -1,5 +1,9 @@
-var SimpleStorage = artifacts.require("./SimpleStorage.sol");
+var Secure = artifacts.require("../contracts/Secure.sol");
+var CreatorFactory = artifacts.require("../contracts/CreatorFactory.sol");
+var BountyCreator = artifacts.require("../contracts/BountyCreator.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(SimpleStorage);
+  deployer.deploy(Secure);
+  deployer.deploy(CreatorFactory);
+  deployer.deploy(BountyCreator);
 };

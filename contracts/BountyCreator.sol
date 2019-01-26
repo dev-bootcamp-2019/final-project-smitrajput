@@ -1,42 +1,22 @@
 pragma solidity ^0.5.0;
 
-import 'openzeppelin-solidity/contracts/payment/PullPayment.sol';
+import './Secure.sol';
 
-contract BountyCreator is PullPayment {
+contract BountyCreator is Secure {
     
-    address public creator;
+    address public creatorAddress;
+    string public creatorName;
     uint public numberOfBounties;
     uint public totalFunding;
     mapping (uint => Bounty) bounties;
     uint public currentTime = now;
-
     
-    //modifiers
-    modifier onlyCreator() {
-        require(msg.sender == creator);
-        _;
-    }
-
-    modifier validBounty(uint bountyID) {
-        require(bountyID >=0 && bountyID < numberOfBounties);
-        _;
-    }
-
-    modifier validSubmission(uint bountyID, uint subID) {
-        require(bountyID >=0 && bountyID < numberOfBounties && 
-                subID >=0 && subID < bounties[bountyID].numberOfSubmissions);
-        _;
-    }
     
-    modifier isActive(uint bountyID) {
-        require(now < bounties[bountyID].startTime + bounties[bountyID].expiryTime * 1 days);
-        _;
-    }
-
-    
-    //events
     event BountyCreated(uint bountyID);
+    event RewardChanged(uint bountyID, uint newReward);
     event SubCreated(uint bountyID, uint subID);
+    event SubAccepted(address indexed author, uint reward);
+    
     
     enum BountyState {
         Active,
@@ -64,14 +44,43 @@ contract BountyCreator is PullPayment {
         string solution;
         SubStatus status;
     }
+
     
-    constructor() public {
-        creator = msg.sender;
+    modifier onlyCreator() {
+        require(msg.sender == creatorAddress);
+        _;
+    }
+
+    modifier validBounty(uint bountyID) {
+        require(bountyID >=0 && bountyID < numberOfBounties);
+        _;
+    }
+
+    modifier validSubmission(uint bountyID, uint subID) {
+        require(bountyID >=0 && bountyID < numberOfBounties && 
+                subID >=0 && subID < bounties[bountyID].numberOfSubmissions);
+        _;
+    }
+    
+    modifier isActive(uint bountyID) {
+        require(now < bounties[bountyID].startTime + bounties[bountyID].expiryTime * 1 days);
+        _;
+    }
+
+    
+    constructor(string memory name, address _creatorAddress) public {
+        creatorAddress = _creatorAddress;
+        creatorName = name;
+    }
+    
+    function kill() public onlyOwner {
+        selfdestruct(owner);
     }
     
     function createBounty(string memory _task, uint _expiryTime) 
         public
-        onlyCreator  
+        onlyCreator 
+        noEmergency
         payable
         returns (uint bountyID) 
     {
@@ -88,15 +97,17 @@ contract BountyCreator is PullPayment {
         isActive(bountyID)
     {
         bounties[bountyID].reward = newReward;
+        emit RewardChanged(bountyID, newReward);
     }
     
     function getBountyDetails(uint bountyID) 
         public 
         view 
         validBounty(bountyID)
-        returns(uint, uint, BountyState, uint, uint)
+        returns(string memory, uint, uint, BountyState, uint, uint)
     {
         return (
+            bounties[bountyID].task,
             bounties[bountyID].reward,
             bounties[bountyID].numberOfSubmissions,
             bounties[bountyID].state,
@@ -108,6 +119,7 @@ contract BountyCreator is PullPayment {
     function createSub(uint bountyID, string memory _solution) 
         public 
         isActive(bountyID)
+        noEmergency
         returns(uint subID)
     {
         subID = bounties[bountyID].numberOfSubmissions++;
@@ -120,25 +132,34 @@ contract BountyCreator is PullPayment {
         view 
         validBounty(bountyID)
         validSubmission(bountyID, subID)
-        returns(address, SubStatus)
+        returns(string memory, address, SubStatus)
     {
         return (
+            bounties[bountyID].submissions[subID].solution,
             bounties[bountyID].submissions[subID].author,
             bounties[bountyID].submissions[subID].status
         );
     }
     
     function acceptSubmission(uint bountyID, uint subID) 
-        private 
+        public 
         onlyCreator 
         validBounty(bountyID)
         validSubmission(bountyID, subID)
+        noEmergency
     {
         Bounty storage theBounty = bounties[bountyID];
         uint theReward = theBounty.reward;
+        require(
+            theBounty.reward > 0 &&
+            theBounty.state == BountyState.Active &&
+            theBounty.submissions[subID].author.balance + theReward
+            >= theBounty.submissions[subID].author.balance
+        );
         theBounty.reward = 0;
-        _asyncTransfer(theBounty.submissions[subID].author, theReward);
+        totalFunding -= theReward;
         theBounty.state = BountyState.Inactive;
+        theBounty.submissions[subID].author.transfer(theReward);
+        emit SubAccepted(theBounty.submissions[subID].author, theReward);
     }
 }
-

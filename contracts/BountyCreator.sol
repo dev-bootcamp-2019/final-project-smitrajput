@@ -2,8 +2,13 @@ pragma solidity ^0.5.0;
 
 import './Secure.sol';
 
+/** @title BountyCreator 
+    @dev The contract representing a person who created a bounty on this dapp
+    @author Smit Rajput
+*/
 contract BountyCreator is Secure {
     
+    /** Storage */
     address public creatorAddress;
     string public creatorName;
     uint public numberOfBounties;
@@ -11,13 +16,13 @@ contract BountyCreator is Secure {
     mapping (uint => Bounty) bounties;
     uint public currentTime = now;
     
-    
+    /** Events */
     event BountyCreated(uint bountyID);
     event RewardChanged(uint bountyID, uint newReward);
     event SubCreated(uint bountyID, uint subID);
     event SubAccepted(address indexed author, uint reward);
     
-    
+    /** Enums (custom constant data types) */
     enum BountyState {
         Active,
         Inactive
@@ -29,6 +34,7 @@ contract BountyCreator is Secure {
         Rejected
     }
     
+    /** Structs (custom variable data types) */
     struct Bounty {
         string task;
         uint reward;
@@ -45,7 +51,7 @@ contract BountyCreator is Secure {
         SubStatus status;
     }
 
-    
+    /** Modifiers */
     modifier onlyCreator() {
         require(msg.sender == creatorAddress);
         _;
@@ -67,16 +73,27 @@ contract BountyCreator is Secure {
         _;
     }
 
-    
+    /** @dev The constructor to create this contract
+        @param name Name of the bounty-creator
+        @param _creatorAddress Address of the bounty-creator
+     */
     constructor(string memory name, address _creatorAddress) public {
         creatorAddress = _creatorAddress;
         creatorName = name;
     }
     
+    /** @dev To destroy this contract once the bounty-creator leaves the dapp permanently
+        Only the dapp-owner can call this function
+     */
     function kill() public onlyOwner {
         selfdestruct(owner);
     }
     
+    /** @dev To create a bounty
+        @param _task The bounty description
+        @param _expiryTime Deadline to finish the bounty
+        @return bountyID The ID of the new bounty
+     */
     function createBounty(string memory _task, uint _expiryTime) 
         public
         onlyCreator 
@@ -90,6 +107,10 @@ contract BountyCreator is Secure {
         emit BountyCreated(bountyID);
     }
     
+    /** @dev To change the prize/reward of a bounty
+        @param bountyID The ID of the bounty to change the reward of
+        @param newReward The new reward to assign to the bounty
+     */
     function changeReward(uint bountyID, uint newReward) 
         private
         onlyCreator 
@@ -100,6 +121,10 @@ contract BountyCreator is Secure {
         emit RewardChanged(bountyID, newReward);
     }
     
+    /** @dev To receive the complete details of a bounty
+        @param bountyID The ID of the bounty to receive the details of
+        @return All the details of the bounty, corresponding to bountyID
+     */
     function getBountyDetails(uint bountyID) 
         public 
         view 
@@ -116,6 +141,11 @@ contract BountyCreator is Secure {
         );
     }
     
+    /** @dev To create a submission for a bounty
+        @param bountyID The ID of the bounty to submit to
+        @param _solution The solution to the bounty
+        @return subID The ID of the new submission
+     */
     function createSub(uint bountyID, string memory _solution) 
         public 
         isActive(bountyID)
@@ -127,6 +157,11 @@ contract BountyCreator is Secure {
         emit SubCreated(bountyID, subID);
     }
     
+    /** @dev To receive the complete details of a submission to a bounty
+        @param bountyID The ID of the bounty to which the submission belongs
+        @param subID The ID of the submission to receive the details of
+        @return All the details of the submission corresponding to the bountyID and subID
+     */
     function getSubDetails(uint bountyID, uint subID) 
         public 
         view 
@@ -141,6 +176,11 @@ contract BountyCreator is Secure {
         );
     }
     
+    /** @dev To accept a particular submission to a bounty and pay him/her the reward
+        @param bountyID The ID of the bounty to which the winning submission belongs
+        @param subID The ID of the winning submission
+        Only the bounty-creator can call this function, and that too in the state of no emergency
+     */
     function acceptSubmission(uint bountyID, uint subID) 
         public 
         onlyCreator 

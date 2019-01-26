@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import './Secure.sol';
+import "./Secure.sol";
 
 /** @title BountyCreator 
     @dev The contract representing a person who created a bounty on this dapp
@@ -13,7 +13,7 @@ contract BountyCreator is Secure {
     string public creatorName;
     uint public numberOfBounties;
     uint public totalFunding;
-    mapping (uint => Bounty) bounties;
+    mapping (uint => Bounty) public bounties;
     uint public currentTime = now;
     
     /** Events */
@@ -96,7 +96,7 @@ contract BountyCreator is Secure {
      */
     function createBounty(string memory _task, uint _expiryTime) 
         public
-        onlyCreator 
+        //onlyCreator 
         noEmergency
         payable
         returns (uint bountyID) 

@@ -35,7 +35,8 @@
       "inputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "constructor"
+      "type": "constructor",
+      "signature": "constructor"
     },
     {
       "constant": false,
@@ -1374,12 +1375,18 @@
     "4447": {
       "events": {},
       "links": {},
-      "address": "0x83b2C254ddbb03A774396e64DfD5A04f6F38ce8A",
-      "transactionHash": "0x598f913b1e772d103ab30586399526ff701e61758166e87ff49ebb6f893d95e3"
+      "address": "0x06ff7f790edEFD6E0824cFf9e55acFecF0AB25B7",
+      "transactionHash": "0xef498107fa4e009d0d8ad3675b44cb7a6c24ed5050e0608dd73d0b0dbbc0e2e7"
+    },
+    "1548511790587": {
+      "events": {},
+      "links": {},
+      "address": "0x447C86Bf02cedd459AaF6752B17a365531064399",
+      "transactionHash": "0xa16baf696065f408fb49618716ced99e2eb380fcad4057703121006ee9bf48ec"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-26T11:22:54.453Z",
+  "updatedAt": "2019-01-26T19:05:29.529Z",
   "devdoc": {
     "methods": {}
   },

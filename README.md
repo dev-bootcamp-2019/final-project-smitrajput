@@ -1,4 +1,4 @@
-# BountyDapp.
+# BountyDapp
 
 ## What it is?
 

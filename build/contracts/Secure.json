@@ -1343,10 +1343,40 @@
       "links": {},
       "address": "0x92eb6c854FBc729A6D637f50be9BB354953850d9",
       "transactionHash": "0x5eb3fc8d5c32cdd4b861523051ac8e7f1cf0957b2b009dccb164902774faec33"
+    },
+    "1548608024428": {
+      "events": {},
+      "links": {},
+      "address": "0x92cCF3131203cE9d77bc803C7d1E0A6991B10F52",
+      "transactionHash": "0x5eb3fc8d5c32cdd4b861523051ac8e7f1cf0957b2b009dccb164902774faec33"
+    },
+    "1548621835771": {
+      "events": {},
+      "links": {},
+      "address": "0xA0a327bEd3C93159602234e8eA4d1E46D827B69b",
+      "transactionHash": "0x5eb3fc8d5c32cdd4b861523051ac8e7f1cf0957b2b009dccb164902774faec33"
+    },
+    "1548623997441": {
+      "events": {},
+      "links": {},
+      "address": "0x861047A4890ebBda177E235E319b1f8B39844BFB",
+      "transactionHash": "0x5eb3fc8d5c32cdd4b861523051ac8e7f1cf0957b2b009dccb164902774faec33"
+    },
+    "1548625109560": {
+      "events": {},
+      "links": {},
+      "address": "0xC84c0D86D53cc8c15558341FA5bB9B9f3F2547c8",
+      "transactionHash": "0x5eb3fc8d5c32cdd4b861523051ac8e7f1cf0957b2b009dccb164902774faec33"
+    },
+    "1548628641511": {
+      "events": {},
+      "links": {},
+      "address": "0x8815e90602dc860bDC9F1b918E90795B5f64ad2E",
+      "transactionHash": "0x5eb3fc8d5c32cdd4b861523051ac8e7f1cf0957b2b009dccb164902774faec33"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-26T19:05:29.526Z",
+  "updatedAt": "2019-01-27T22:37:48.642Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "Used to create a circuit-breaker in case of an emergency",

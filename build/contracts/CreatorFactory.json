@@ -1510,10 +1510,40 @@
       "links": {},
       "address": "0x2aa4A4a593e4AB9f533e9A3BC1E70DefFe47fE65",
       "transactionHash": "0x07562acc56ee071872693254e27c088dc0c27df59dc3650abb381d00bb790ca9"
+    },
+    "1548608024428": {
+      "events": {},
+      "links": {},
+      "address": "0xbe56876a34336F535523b5515E1C3101c9975253",
+      "transactionHash": "0xf3f6e317e7d40b8a73d4687d334b0bffb0d75377ce6e01c00ba5563cc5e016df"
+    },
+    "1548621835771": {
+      "events": {},
+      "links": {},
+      "address": "0x1381F60039dfbBEDc2047F32b7849D99A54f5F7b",
+      "transactionHash": "0xf3f6e317e7d40b8a73d4687d334b0bffb0d75377ce6e01c00ba5563cc5e016df"
+    },
+    "1548623997441": {
+      "events": {},
+      "links": {},
+      "address": "0x6c614c8755AA2731346d0ed5395E986C8619aae5",
+      "transactionHash": "0xf3f6e317e7d40b8a73d4687d334b0bffb0d75377ce6e01c00ba5563cc5e016df"
+    },
+    "1548625109560": {
+      "events": {},
+      "links": {},
+      "address": "0xC0DdD6aF015daa7619B8110684036dc2C95291aD",
+      "transactionHash": "0xf3f6e317e7d40b8a73d4687d334b0bffb0d75377ce6e01c00ba5563cc5e016df"
+    },
+    "1548628641511": {
+      "events": {},
+      "links": {},
+      "address": "0x74171B7D32C28c9c68F29BaFb67A5Beb9bb0714C",
+      "transactionHash": "0xf3f6e317e7d40b8a73d4687d334b0bffb0d75377ce6e01c00ba5563cc5e016df"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-26T19:05:29.527Z",
+  "updatedAt": "2019-01-27T22:37:48.643Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "Works like a factory to create contracts for bounty-creators",

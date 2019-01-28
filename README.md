@@ -1,10 +1,10 @@
-# BountyDapp
+# BountyDapp (WIP)
 
 ## What it is?
 
 A decentralized application that allows one and all to post bounties on any task they wish, and solve them at the will of the bounty-creators to get paid out in ETH.
 
-## Key Features (WIP)
+## Key Features
 
 1. Allows one to create bounties on any task
 2. Allows one to solve any bounty and get paid in ETH 

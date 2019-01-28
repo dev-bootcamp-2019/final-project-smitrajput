@@ -12568,10 +12568,16 @@
       "links": {},
       "address": "0xe4c3dd407e17Fa27DBFA830c1e28edD2a58AD2fC",
       "transactionHash": "0x199230d914cb5e46b210c88e80b7635b9c9262de124b621641307c1f1badb195"
+    },
+    "1548654025232": {
+      "events": {},
+      "links": {},
+      "address": "0xa7A3cCE91EB7aA2698F37e8A15dFfCAb7213F9A3",
+      "transactionHash": "0xae7bf03c8fa7cc5fc4db45f8d9618bb1c3aa4e4eccda3cf7ed81bab4a2df650c"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-27T22:37:48.650Z",
+  "updatedAt": "2019-01-28T05:41:28.327Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "The contract representing a person who created a bounty on this dapp",

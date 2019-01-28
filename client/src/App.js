@@ -24,7 +24,7 @@ class App extends Component {
         deployedNetwork && deployedNetwork.address,
       );
 
-      instance.options.address = "0x6969AF6980e1fA27fbE6a2ba3b49B1bfC5924739";
+      instance.options.address = "0x3400Bd1F72828b738986109B1992a7eAF11364D8";
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
@@ -84,7 +84,7 @@ class App extends Component {
         </div>
 
         <div>Number of Bounty-Creators registered: {this.state.storageValue}</div>
-        <div>Your Ethereum address: {this.state.account}</div> 
+        <div>Your Ethereum address (visible after clicking the button above): {this.state.account}</div> 
 
         
           <Menu fluid widths={5}>

@@ -12527,6 +12527,12 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xB64843471e82D90407b30e9E73a8197C8FE363fb",
+      "transactionHash": "0xd1cda56214de9abced3389f60cf35355d858d70f06439bbed117e240c51e840f"
+    },
     "4447": {
       "events": {},
       "links": {},
@@ -12574,10 +12580,16 @@
       "links": {},
       "address": "0xa7A3cCE91EB7aA2698F37e8A15dFfCAb7213F9A3",
       "transactionHash": "0xae7bf03c8fa7cc5fc4db45f8d9618bb1c3aa4e4eccda3cf7ed81bab4a2df650c"
+    },
+    "1548666433666": {
+      "events": {},
+      "links": {},
+      "address": "0x2aE133AE6fE549F50CE8983Bb07abe464198feE4",
+      "transactionHash": "0x3869116bd8032433727d1eee44f1fa06942d3e8d7265162b01ea807a62a7836b"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T05:41:28.327Z",
+  "updatedAt": "2019-01-28T10:39:44.060Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "The contract representing a person who created a bounty on this dapp",

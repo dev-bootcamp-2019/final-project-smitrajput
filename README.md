@@ -25,7 +25,7 @@ Type the following in the command line / terminal
 10. To start the local dev server and launch the dapp: `npm run start`
 11. It will aotomatically open, else visit `http://localhost:3000/` to interact with the dapp.
     Type `Y`, if it asks to use another port, in case the port 3000 is already in use.
-12. Login to your Metamask and allow the React App to connect to your MetaMask account.
+12. Login to your Metamask into the Rinkeby Test Network and allow the React App to connect to your MetaMask account.
 13. Click on 'Become a Bounty-Creator' button to register yourself as a Bounty-Creator.
 14. You will observe the number of Bounty-Creators increase (you can cross-check by noting the current number, then refesh the page, and register again to see the number of Bounty-Creators increase by 1).
 15. You can also see your Metamask account ETH address after registering.

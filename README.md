@@ -18,7 +18,7 @@ Type the following in the command line / terminal
 3. To install dapp dependencies: `npm install`
 4. To run a local blockchain to test the contracts: `truffle develop`
 5. To commpile, in the truffle console type: `compile`
-6. To migrate the contracts on the blockchain: `migrate`. Use `migrate --reset` if migrating more than once.
+6. To migrate the contracts on the blockchain: `migrate`. Use `migrate --reset` in case of error.
 7. To test, type: `test`
 8. `cd client`
 9. To install app dependencies: `npm install`

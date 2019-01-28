@@ -17,7 +17,7 @@ Type the following in the command line / terminal
 2. `cd final-project-smitrajput`
 3. To install dapp dependencies: `npm install`
 4. To run a local blockchain to test the contracts: `truffle develop`
-5. To commpile, in the truffle console type: `compile`
+5. To compile, in the truffle console type: `compile`
 6. To migrate the contracts on the blockchain: `migrate`. Use `migrate --reset` in case of error.
 7. To test, type: `test`
 8. `cd client`
@@ -27,5 +27,5 @@ Type the following in the command line / terminal
     Type `Yes`, if it asks to use another port, in case the port 3000 is already in use.
 12. Login to your Metamask and allow the React App to connect to your MetaMask account.
 13. Click on 'Become a Bounty-Creator' button to register yourself as a Bounty-Creator.
-14. You will the number of Bounty-Creators increase.
+14. You will observe the number of Bounty-Creators increase.
 15. You can also see your Metamask account ETH address

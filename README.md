@@ -24,3 +24,4 @@ Type the following in the command line / terminal
 9. To install app dependencies: `npm install`
 10. To start the local dev server: `npm run start`
 11. Visit `http://localhost:3000/` to interact with the dapp
+    Type `Y`/`y`/`Yes`, if the port 3000 is already in use

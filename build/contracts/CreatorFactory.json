@@ -1499,6 +1499,12 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x3400Bd1F72828b738986109B1992a7eAF11364D8",
+      "transactionHash": "0xe7aa22c35c82366932151773a2cd2f2d50e787b1eb72e160a5c7016cb6d73ca3"
+    },
     "4447": {
       "events": {},
       "links": {},
@@ -1546,10 +1552,16 @@
       "links": {},
       "address": "0x6969AF6980e1fA27fbE6a2ba3b49B1bfC5924739",
       "transactionHash": "0xf3f6e317e7d40b8a73d4687d334b0bffb0d75377ce6e01c00ba5563cc5e016df"
+    },
+    "1548666433666": {
+      "events": {},
+      "links": {},
+      "address": "0xa410304e24D7EB34cDB84D911582B903f4071296",
+      "transactionHash": "0xf3f6e317e7d40b8a73d4687d334b0bffb0d75377ce6e01c00ba5563cc5e016df"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T05:41:28.321Z",
+  "updatedAt": "2019-01-28T10:39:44.052Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "Works like a factory to create contracts for bounty-creators",

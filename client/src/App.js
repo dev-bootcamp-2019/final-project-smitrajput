@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Menu } from 'semantic-ui-react'
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import CreatorFactoryContract from "./contracts/CreatorFactory.json";
 import getWeb3 from "./utils/getWeb3";
 
 import "./App.css";
@@ -18,15 +18,17 @@ class App extends Component {
 
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
-      const deployedNetwork = SimpleStorageContract.networks[networkId];
+      const deployedNetwork = CreatorFactoryContract.networks[networkId];
       const instance = new web3.eth.Contract(
-        SimpleStorageContract.abi,
+        CreatorFactoryContract.abi,
         deployedNetwork && deployedNetwork.address,
       );
 
+      instance.options.address = "0x6969AF6980e1fA27fbE6a2ba3b49B1bfC5924739";
+
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance }, this.runExample);
+      this.setState({ web3, accounts, contract: instance });
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -36,32 +38,33 @@ class App extends Component {
     }
   };
 
-  runExample = async () => {
-    const { accounts, contract } = this.state;
+  // runExample = async () => {
+  //   const { accounts, contract } = this.state;
 
-    // Stores a given value, 5 by default.
-    await contract.methods.set(5).send({ from: accounts[0] });
+  //   // Stores a given value, 5 by default.
+  //   await contract.methods.createBountyCreator("Bob").send({ from: accounts[0] });
 
-    // Get the value from the contract to prove it worked.
-    const response = await contract.methods.get().call();
+  //   // Get the value from the contract to prove it worked.
+  //   const response = await contract.methods.numOfCreators().call();
 
-    // Update state with the result.
-    this.setState({ storageValue: response, account: accounts[0] });
-  };
+  //   // Update state with the result.
+  //   this.setState({ storageValue: response, account: accounts[0] });
+  // };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
-  // handleClick(event) {
-  //   const contract = this.state.contract;
-  //   const account = this.state.account;
+  async handleClick(event) {
+    const { accounts, contract } = this.state;
 
-  //   contract.methods.set.send(3, {from: account})
-  //   .then(result => {
-  //     return contract.get.call()
-  //   }).then(result => {
-  //     return this.setState({storageValue: result.c[0]})
-  //   })
-  // }
+    // Stores a given value, 5 by default.
+    await contract.methods.createBountyCreator("Bob").send({ from: accounts[0] });
+
+    // Get the value from the contract to prove it worked.
+    const response = await contract.methods.numOfCreators().call();
+
+    // Update state with the result.
+    this.setState({ storageValue: response, account: accounts[0] });
+  }
 
   // <Button onClick={this.handleClick.bind(this)}>Set Storage</Button>
 
@@ -76,9 +79,12 @@ class App extends Component {
       <div className="App">
         <h1>BountyDapp</h1>
         <div>
-          <Button primary>Become a Bounty-Creator</Button>
+          <Button primary onClick={this.handleClick.bind(this)}>Become a Bounty-Creator</Button>
 
         </div>
+
+        <div>Number of Bounty-Creators registered: {this.state.storageValue}</div>
+        <div>Your Ethereum address: {this.state.account}</div> 
 
         
           <Menu fluid widths={5}>

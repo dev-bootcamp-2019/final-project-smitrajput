@@ -1540,10 +1540,16 @@
       "links": {},
       "address": "0x74171B7D32C28c9c68F29BaFb67A5Beb9bb0714C",
       "transactionHash": "0xf3f6e317e7d40b8a73d4687d334b0bffb0d75377ce6e01c00ba5563cc5e016df"
+    },
+    "1548654025232": {
+      "events": {},
+      "links": {},
+      "address": "0x6969AF6980e1fA27fbE6a2ba3b49B1bfC5924739",
+      "transactionHash": "0xf3f6e317e7d40b8a73d4687d334b0bffb0d75377ce6e01c00ba5563cc5e016df"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-27T22:37:48.643Z",
+  "updatedAt": "2019-01-28T05:41:28.321Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "Works like a factory to create contracts for bounty-creators",

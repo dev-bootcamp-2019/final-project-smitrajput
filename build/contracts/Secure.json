@@ -1373,10 +1373,16 @@
       "links": {},
       "address": "0x8815e90602dc860bDC9F1b918E90795B5f64ad2E",
       "transactionHash": "0x5eb3fc8d5c32cdd4b861523051ac8e7f1cf0957b2b009dccb164902774faec33"
+    },
+    "1548654025232": {
+      "events": {},
+      "links": {},
+      "address": "0x73AfdF84a082cfFD5A4d7afFAf2cC8477719B1b2",
+      "transactionHash": "0x5eb3fc8d5c32cdd4b861523051ac8e7f1cf0957b2b009dccb164902774faec33"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-27T22:37:48.642Z",
+  "updatedAt": "2019-01-28T05:41:28.318Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "Used to create a circuit-breaker in case of an emergency",

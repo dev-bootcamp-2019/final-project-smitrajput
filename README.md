@@ -23,8 +23,8 @@ Type the following in the command line / terminal
 8. `cd client`
 9. To install app dependencies: `npm install`
 10. To start the local dev server and launch the dapp: `npm run start`
-11. Visit `http://localhost:3000/` to interact with the dapp.
-    Type `Yes`, if it asks to use another port, in case the port 3000 is already in use.
+11. It will aotomatically open, else visit `http://localhost:3000/` to interact with the dapp.
+    Type `Y`, if it asks to use another port, in case the port 3000 is already in use.
 12. Login to your Metamask and allow the React App to connect to your MetaMask account.
 13. Click on 'Become a Bounty-Creator' button to register yourself as a Bounty-Creator.
 14. You will observe the number of Bounty-Creators increase.

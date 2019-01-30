@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./client/assets/technical-support.png" align="center" width="150">
+  <img src="./assets/technical-support.png" align="center" width="150">
 </p>
 
 <h1 align="center"> BountyDapp (WIP)</h1>

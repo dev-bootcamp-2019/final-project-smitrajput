@@ -1,7 +1,10 @@
-Deployed addresses of contracts on the Rinkeby Test Network:
+Deployed addresses of contracts on the Rinkeby Test Network, along with their verification URLs:
 
-Contract        Address
+Contract        Address                                         Verification URL
 
-Secure          0x4bd0044874dD55815B171f83D14dFD2FC1946404
-CreatorFactory  0x3400Bd1F72828b738986109B1992a7eAF11364D8
-BountyCreator   0xB64843471e82D90407b30e9E73a8197C8FE363fb
+Secure          0x4bd0044874dD55815B171f83D14dFD2FC1946404  https://rinkeby.etherscan.io/address/0x4bd0044874dd55815b171f83d14dfd2fc1946404
+CreatorFactory  0x3400Bd1F72828b738986109B1992a7eAF11364D8  https://rinkeby.etherscan.io/address/0x3400Bd1F72828b738986109B1992a7eAF11364D8 
+BountyCreator   0xB64843471e82D90407b30e9E73a8197C8FE363fb  https://rinkeby.etherscan.io/address/0xb64843471e82d90407b30e9e73a8197c8fe363fb  
+
+You can also observe in the Contract Creation transaction (i.e. the first and the oldest transaction) in each URL, the 'From' address being
+ '0xD14d6F37fF841980f0cFCdF199771ff0D283D880', which happens to be my personal Metamask address with which I deployed the contracts on Rinkeby.

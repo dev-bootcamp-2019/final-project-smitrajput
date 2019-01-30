@@ -12536,8 +12536,8 @@
     "4447": {
       "events": {},
       "links": {},
-      "address": "0xB08a736489aA49092B4eedC41e84618bD23C0f29",
-      "transactionHash": "0x669fa7e9c24cc014bfb9ac4f664eb53cc1241e1b88a4d85beac9e40a8ce37a8c"
+      "address": "0xb9bF4f5f388B697927a2Cc23101063FB18C754EB",
+      "transactionHash": "0xb2ce483ee8b4834e17b3c8afaf52f8dba4b45d7adb62269ae6531572e305016b"
     },
     "1548511790587": {
       "events": {},
@@ -12589,7 +12589,7 @@
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T10:39:44.060Z",
+  "updatedAt": "2019-01-30T11:46:25.001Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "The contract representing a person who created a bounty on this dapp",

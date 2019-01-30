@@ -1508,8 +1508,8 @@
     "4447": {
       "events": {},
       "links": {},
-      "address": "0x8A4771d1DEE7bE3c634292B10060513cf40bF2B1",
-      "transactionHash": "0x8f77e63c800cad2a22ca6464fedc478e892965b2625e236d76119335496fe02d"
+      "address": "0x6780797a4dD4fbC58197c122b5694b0768CEda88",
+      "transactionHash": "0xd9d74697ae76a9fbe3671659a688f3106c4c7fb98caaacfad17a7c345d3823da"
     },
     "1548511790587": {
       "events": {},
@@ -1561,7 +1561,7 @@
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T10:39:44.052Z",
+  "updatedAt": "2019-01-30T11:46:24.991Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "Works like a factory to create contracts for bounty-creators",

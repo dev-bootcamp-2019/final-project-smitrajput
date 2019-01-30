@@ -1341,8 +1341,8 @@
     "4447": {
       "events": {},
       "links": {},
-      "address": "0xA3f0AD5a9666b700508DBFB65dbda30DD9020185",
-      "transactionHash": "0x1318e858ad75e466d0e686cfee4e2b75822ceabc0169ee2e8498184f60c5e8bd"
+      "address": "0xcFbBB0C5053d6811C15cb65719225E43fCd82dCD",
+      "transactionHash": "0x80c33a2ae0c1d853f07d1d9ed29c4c45ad7ac45c4a8b18d72e11d6353dfb197c"
     },
     "1548511790587": {
       "events": {},
@@ -1394,7 +1394,7 @@
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T10:39:44.047Z",
+  "updatedAt": "2019-01-30T11:46:24.989Z",
   "devdoc": {
     "author": "Smit Rajput",
     "details": "Used to create a circuit-breaker in case of an emergency",

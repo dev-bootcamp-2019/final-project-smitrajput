@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/technical-support.png" align="center" width="150">
+  <img src="./client/assets/technical-support.png" align="center" width="150">
 </p>
 
 <h1 align="center"> BountyDapp (WIP)</h1>
@@ -36,3 +36,4 @@ Type the following in the command line / terminal
 [Smit Rajput](https://github.com/smitrajput)
 
 [<img src="https://image.flaticon.com/icons/svg/185/185961.svg" width="35" padding="10">](https://twitter.com/smit_rajput19)
+[<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://www.linkedin.com/in/smit-r-417517139/)

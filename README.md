@@ -2,7 +2,7 @@
   <img src="./client/assets/list.png" align="center" width="150">
 </p>
 
-<h1 align="center"> BountyDapp (WIP)</h1>
+<h1 align="center"> BountyDapp </h1>
 <p align="center">A decentralized bounty-creating and bounty-hunting application.</p>
 
 

@@ -47,7 +47,6 @@ README: [Anshuman Verma](https://github.com/anshumanv)
 
 ### Author
 
-[Smit Rajput](https://github.com/smitrajput)
+[Smit Rajput](https://github.com/smitrajput) 
 
-[<img src="https://image.flaticon.com/icons/svg/185/185961.svg" width="35" padding="10">](https://twitter.com/smit_rajput19)
 [<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://www.linkedin.com/in/smit-r-417517139/)

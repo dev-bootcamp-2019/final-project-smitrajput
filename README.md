@@ -9,7 +9,7 @@
 ### Key Features
 
 1. Allows one to create bounties on any task
-2. Allows one to solve any bounty and get paid in ETH
+2. Allows one to solve any of the listed bounties and get paid in ETH
 
 ### How to set up?
 

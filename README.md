@@ -16,6 +16,7 @@
 1. Truffle v5.0.1
 2. Ganache CLI v6.1.6 (ganache-core: 2.1.5)
 3. Node v9.11.2
+4. npm 6.5.0
 
 ### How to set up?
 

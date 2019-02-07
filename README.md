@@ -21,7 +21,7 @@
 6. Semantic-ui-css v2.4.1
 7. Web3 v1.0.0-beta.37
 8. VS Code v1.31.0
-9. Remix
+9. Remix IDE
 
 ### How to set up?
 

@@ -16,11 +16,12 @@
 1. Truffle v5.0.1
 2. Ganache CLI v6.1.6 (ganache-core: 2.1.5)
 3. Node v9.11.2
-4. ReactJS ^16.6.3
-5. Semantic-ui-react ^0.84.0
-5. Semantic-ui-css ^2.4.1
-5. VS Code 1.31.0
-6. Remix
+4. ReactJS v16.6.3
+5. Semantic-ui-react v0.84.0
+6. Semantic-ui-css v2.4.1
+7. Web3 v1.0.0-beta.37
+8. VS Code v1.31.0
+9. Remix
 
 ### How to set up?
 

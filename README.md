@@ -23,7 +23,7 @@
 8. VS Code v1.31.0
 9. Remix IDE
 
-### How to set up?
+### How to set up this project?
 
 Type the following in the command line / terminal
 

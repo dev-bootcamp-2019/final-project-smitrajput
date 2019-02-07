@@ -11,6 +11,12 @@
 1. Allows one to create bounties on any task
 2. Allows one to solve any of the listed bounties and get paid in ETH
 
+### Techs and Tools used
+
+1. Truffle v5.0.1
+2. Ganache CLI v6.1.6 (ganache-core: 2.1.5)
+3. Node v9.11.2
+
 ### How to set up?
 
 Type the following in the command line / terminal

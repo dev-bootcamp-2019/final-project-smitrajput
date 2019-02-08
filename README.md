@@ -29,7 +29,7 @@ Type the following in the command line / terminal
 
 1. `git clone https://github.com/dev-bootcamp-2019/final-project-smitrajput.git`
 2. `cd final-project-smitrajput`
-3. To install dapp dependencies: `npm install`
+3. To install dapp dependencies: `npm install dotenv truffle-hdwallet-provider`
 
 ### Testing the contracts locally
 
